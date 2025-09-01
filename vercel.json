@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/resume",
+      "destination": "https://drive.google.com/file/d/1blI7Nqdd05OyUxBKjWBchmucsfwygeDp/view",
+      "permanent": true
+    }
+  ]
+}
+  
