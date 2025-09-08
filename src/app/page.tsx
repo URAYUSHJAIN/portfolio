@@ -3,6 +3,8 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { CertificateCard } from "@/components/ui/certificates";
 import { ResumeCard } from "@/components/ui/resume-card";
+import { ExperienceCard } from "@/components/ui/experience-card";
+import { PatentCard } from "@/components/ui/patent-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
@@ -83,6 +85,31 @@ export default function Page() {
           ))}
         </div>
       </section>
+      <section id="experience">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-xl font-bold">Experience</h2>
+          </BlurFade>
+          {DATA.experience.map((experience, id) => (
+            <BlurFade
+              key={experience.company}
+              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+            >
+              <ExperienceCard
+                key={experience.company}
+                logoUrl={experience.logoUrl}
+                altText={experience.company}
+                title={experience.company}
+                subtitle={experience.role}
+                href={experience.href}
+                period={`${experience.start} - ${experience.end}`}
+                description={experience.description}
+                responsibilities={experience.responsibilities}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
@@ -136,41 +163,38 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="UpcomingProjects">
+      <section id="patents">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Upcoming Projects...
+                  Patents
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my upcoming projects
+                  My Patent Portfolio
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                These projects are what I'm working on right now and soon will be available in the future
+                As a 5x patent holder, I've contributed to innovation in smart energy systems, blockchain technology, and AI-powered solutions.
                 </p>
               </div>
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.UpcomingProjects.map((project, id) => (
-              <NeonGradientCard
-                key={project.title}
+            {DATA.patents.map((patent, id) => (
+              <BlurFade
+                key={patent.title}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
-                <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
-              </NeonGradientCard>
+                <NeonGradientCard className="items-center justify-center text-center">
+                  <PatentCard
+                    title={patent.title}
+                    applicationNumber={patent.applicationNumber}
+                    publicationNumber={patent.publicationNumber}
+                    date={patent.date}
+                  />
+                </NeonGradientCard>
+              </BlurFade>
             ))}
           </div>
         </div>

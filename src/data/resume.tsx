@@ -11,7 +11,7 @@ export const DATA = {
     "Third-year Computer Science Engineering student at ABES Engineering College, 5x Patent Holder specializing in Generative AI, Web3, and Full-Stack Development.",
   summary:
     "I am Ayush Jain, a third-year Computer Science Engineering student at ABES Engineering College and a 5x patent holder. With a strong foundation in core CSE subjects and advanced skills in data structures, algorithms, and system design, I thrive on building scalable, impactful solutions.\nMy academic and project journey has fueled a deep passion for technology, leading to the development of cutting-edge projects in smart energy systems, blockchain-based optimization, and citizen services. I am committed to continuous learning and pushing the boundaries of technology through research, innovation, and hands-on engineering.",
-  avatarUrl: "/ayush.jpg",
+  avatarUrl: "/ayu.jpg",
   skills: [
   "Data Structures & Algorithms",
   "Object-Oriented Programming (OOP)",
@@ -37,7 +37,7 @@ export const DATA = {
 ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "https://www.techwithsd.com", icon: NotebookIcon, label: "Blog" },
+    // { href: "https://www.techwithsd.com", icon: NotebookIcon, label: "Blog" },
     { 
       href: "https://drive.google.com/file/d/1blI7Nqdd05OyUxBKjWBchmucsfwygeDp/view?usp=sharing", 
       icon: File, 
@@ -86,6 +86,23 @@ export const DATA = {
       logoUrl: "/sjs.jpg",
       start: "2010",
       end: "2022",
+    },
+  ],
+  experience: [
+    {
+      company: "GDG ABESEC",
+      href: "https://gdg.community.dev/gdg-abesec/",
+      role: "Co Organizer",
+      logoUrl: "/gdg.jpg",
+      start: "Sep 2025",
+      end: "Present",
+      description: "Leading event management and community engagement initiatives. Responsible for organizing technical workshops, managing sponsorships, and fostering leadership development within the Google Developer Groups community.",
+      responsibilities: [
+        "Team Leadership & Leadership Development",
+        "Event Management & Planning", 
+        "Sponsorship Coordination",
+        "Community Engagement"
+      ]
     },
   ],
   projects: [
@@ -153,7 +170,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/shayoga.jpg",
       video: "",
     },
     {
@@ -215,94 +232,111 @@ export const DATA = {
     
   ],
 
+
   patents: [
     {
-      title: "Smart Energy Optimization System",
-      dateOfPublish: "March 2024",
-      patentNumber: "IN1234567",
-      applicationNumber: "20231234567",
+      title: "GENSHAKTI: AI-DRIVEN SMART ENERGY SAVER",
+      applicationNumber: "202511025277",
+      publicationNumber: "14/2025",
+      date: "04/04/2025",
     },
     {
-      title: "Blockchain-Based Citizen Services",
-      dateOfPublish: "July 2023",
-      patentNumber: "IN7654321",
-      applicationNumber: "20237654321",
+      title: "GENSHAKTI: AI-DRIVEN SMART ZONE SELECTION FOR RENEWABLE ENERGY",
+      applicationNumber: "202511025280",
+      publicationNumber: "14/2025",
+      date: "04/04/2025",
     },
     {
-      title: "AI-Powered Carbon Footprint Analyzer",
-      dateOfPublish: "November 2023",
-      patentNumber: "IN2468135",
-      applicationNumber: "20232468135",
+      title: "DECENTRALIZED DOCUMENT CONTROL SYSTEM",
+      applicationNumber: "202511052005",
+      publicationNumber: "24/2025",
+      date: "13/06/2025",
     },
     {
-      title: "Decentralized Crowdfunding Protocol",
-      dateOfPublish: "January 2024",
-      patentNumber: "IN3691470",
-      applicationNumber: "20233691470",
+      title: "BLOCKCHAIN-DRIVEN PHARMACEUTICAL SUPPLY CHAIN OPTIMIZER",
+      applicationNumber: "202511050913",
+      publicationNumber: "24/2025",
+      date: "13/06/2025",
     },
     {
-      title: "Renewable Energy Grid Management System",
-      dateOfPublish: "May 2024",
-      patentNumber: "IN4815926",
-      applicationNumber: "20234815926",
+      title: "AROGYAPLUS: SMART MEDICAL INSIGHTS NAVIGATOR",
+      applicationNumber: "202511053921",
+      publicationNumber: "25/2025",
+      date: "20/06/2025",
     },
-  ],
-
-  UpcomingProjects: [
-    {
-      title: "PadhoVIT",
-      href: "",
-      dates: "June 2023 - Present",
-      active: true,
-      description:
-        "Developing a comprehensive Learning Management System (LMS) using Next.js, Node.js, and MongoDB, focusing on a seamless user experience and efficient backend processes. Integrating technologies like Redis for caching and AWS S3 for media storage, leading to significant improvements in performance and user engagement.",
-    },
-    {
-      title: "RAG",
-      href: "",
-      dates: "Sept 2023 - Present",
-      active: true,
-      description:
-        "Developed a robust and free medical knowledge base using Retrieval Augmented Generation (RAG) with Pinecone, Next.js, LangChain, and Transformers.js. The project processes medical documents for seamless retrieval and embedding, offering efficient and cost-effective AI-powered solutions.",
-    },
-    {
-      title: "RAG",
-      href: "",
-      dates: "Sept 2023 - Present",
-      active: true,
-      description:
-        "Developed a robust and free medical knowledge base using Retrieval Augmented Generation (RAG) with Pinecone, Next.js, LangChain, and Transformers.js. The project processes medical documents for seamless retrieval and embedding, offering efficient and cost-effective AI-powered solutions.",
-    },{
-      title: "RAG",
-      href: "",
-      dates: "Sept 2023 - Present",
-      active: true,
-      description:
-        "Developed a robust and free medical knowledge base using Retrieval Augmented Generation (RAG) with Pinecone, Next.js, LangChain, and Transformers.js. The project processes medical documents for seamless retrieval and embedding, offering efficient and cost-effective AI-powered solutions.",
-    },{
-      title: "RAG",
-      href: "",
-      dates: "Sept 2023 - Present",
-      active: true,
-      description:
-        "Developed a robust and free medical knowledge base using Retrieval Augmented Generation (RAG) with Pinecone, Next.js, LangChain, and Transformers.js. The project processes medical documents for seamless retrieval and embedding, offering efficient and cost-effective AI-powered solutions.",
-    }
   ],
 
   certificate: [
     {
-      title: "Amazon Cloud Practitioner",
-      dates: "Jan 11th, 2024",
+      title: "Certification: Blockchain Basics",
+      dates: "May 2025",
       description:
-        "Completed AWS Cloud Practitioner certification with a good grasp of cloud basics. Proficient in deploying secure cloud solutions, monitoring performance, and implementing disaster recovery plans. I can manage and support cloud environments, ensuring they run smoothly and securely.",
-      image: "/amazonCloudPrac.jpeg",
+        "Comprehensive certification in blockchain fundamentals from Cyfrin. Covered distributed ledger technology, consensus mechanisms, smart contracts, and blockchain security principles.",
+      image: "/cyfrin-blockchain-cert.jpg",
       links: [
         {
-          title: "Source",
+          title: "Show Credential",
           icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://cp.certmetrics.com/amazon/en/public/verify/credential/ce2da91410bc474ba220ab91ef2696fd",
+          href: "https://updraft.cyfrin.io/courses/blockchain-basics/final/proficiency-exam",
         },
       ],
     },
+    {
+      title: "Google Prompting Essentials",
+      dates: "Apr 2025",
+      description:
+        "Google certification in prompt engineering and AI interaction. Learned advanced prompting techniques, AI model optimization, and best practices for leveraging generative AI tools effectively.",
+      image: "/google.png",
+      links: [
+        {
+          title: "Show Credential",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.coursera.org/account/accomplishments/verify/FRJVK9E37OBS",
+        },
+      ],
+    },
+    {
+      title: "Career Essentials in Generative AI by Microsoft and LinkedIn",
+      dates: "May 2024",
+      description:
+        "Comprehensive course covering generative AI fundamentals, computer ethics, and artificial intelligence applications. Gained expertise in AI technologies and their ethical implementation in business contexts.",
+      image: "/microsoft.png",
+      links: [
+        {
+          title: "Show Credential",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.linkedin.com/learning/certificates/455f960aa30c5a926e2e1db562f4d145539ddfe716c99005b7447fa12e282063",
+        },
+      ],
+    },
+    {
+      title: "Vanderbilt University Course",
+      dates: "Jan 2024",
+      description:
+        "Completed advanced course in Prompt Engineering and ChatGPT. Developed skills in AI interaction, prompt optimization, and leveraging large language models for various applications.",
+      image: "/vanderbilt-cert.jpg",
+      links: [
+        {
+          title: "Show Credential",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.coursera.org/account/accomplishments/verify/VQZ6YM6KZAFK?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+        },
+      ],
+    },
+    {
+      title: "Pre-MBA Statistics",
+      dates: "Aug 2023",
+      description:
+        "Completed Pre-MBA Statistics course from Indian Institute of Management Ahmedabad. Gained strong foundation in statistical analysis and data interpretation for business applications.",
+      image: "/iim.png",
+      links: [
+        {
+          title: "Show Credential",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.coursera.org/account/accomplishments/verify/QB2GCAUDUPHK",
+        },
+      ],
+    },
+    
   ],
 } as const;
