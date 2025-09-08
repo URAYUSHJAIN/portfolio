@@ -90,97 +90,142 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "VITicketeer",
-      href: "https://viticketeer.vercel.app/",
-      dates: "May 2024 - July 2024",
+      title: "GenShakti",
+      href: "https://genshaakti.web.app/",
+      dates: "June 2024 - September 2024",
       active: true,
       description:
-        "VITicketeer is an event management platform tailored for your university, featuring a user-friendly interface, secure ticketing via Stripe, and efficient user authentication with Clerk. It simplifies event creation, management, and participation, keeping the campus community connected.",
+        "GenShakti is an AI-driven tool for smart renewable energy planning, carbon modeling, and sustainable living insights.",
       technologies: [
-        "Next.js",
         "React",
-        "Typescript",
+        "javascript",
         "TailwindCSS",
-        "Mongoose",
-        "Stripe",
-        "Clerk",
-        "Vercel",
-        "Shadcn UI",
+        "Reactflow",
+        "React-leaflet",
+        "react-chartjs-2",
+        "Chart.js",
+        "gemini-pro",
+        "Hugging Face",
+        "Firebase",
       ],
       links: [
         {
           type: "Website",
-          href: "https://viticketeer.vercel.app/",
+          href: "https://genshaakti.web.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/sahilshenoy/VITicketeer",
+          href: "https://github.com/URAYUSHJAIN/GenShakti",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/GenShakti.jpg",
+    },
+    {
+      title: "shayoga",
+      href: "https://shayoga.netlify.app/",
+      dates: "February 2025 - March 2025",
+      active: true,
+      description:
+      "Shayoga is a Web3-powered crowdfunding platform that allows anyone to create or support fundraising campaigns on the Ethereum blockchain. Designed with transparency and decentralization at its core, Shayoga ensures that donations reach the right hands — without intermediaries.",
+      technologies: [
+        "React",
+        "JavaScript",
+        "TailwindCSS",
+        "Ethers.js",
+        "Solidity",
+        "Hardhat",
+        "alchemy",
+        "Metamask",
+        "netlify",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://shayoga.netlify.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/URAYUSHJAIN/Shayoga",
           icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
     },
     {
-      title: "BucketByte",
-      href: "https://bucketbyte.com",
+      title: "Tacwin",
+      href: "https://tacwin.vercel.app/",
+      dates: "February 2025 - March 2025",
+      active: true,
+      description:
+      "A beautifully designed Tic Tac Toe game with a modern glassy, neon-themed interface. Built using React, this project is a fun way to revisit a classic game while showcasing responsive design and CSS effects.",
+      technologies: [
+        "React",
+        "JavaScript",
+        "CSS",
+        "vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://tacwin.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/URAYUSHJAIN/Tacwin",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/tacwin.jpg",
+    },
+    {
+      title: "Fusion2048",
+      href: "https://fusion2048.netlify.app/",
       dates: "Sept 2024",
       active: true,
       description:
-        "BucketByte is a platform designed to generate AI-powered blog content, simplifying the content creation process with secure cloud storage and efficient serverless integration. It reflects practical experience in working with Amazon Web Services to create a reliable and scalable solution.",
+      "Fusion2048 is an engaging 2048 puzzle game built with HTML, CSS, and JavaScript. The game challenges players to merge tiles with the same numbers to reach the highest possible score. The game offers smooth animations, user-friendly controls, and a modern design.",
       technologies: [
-        "Amazon Bedrock",
-        "Amazon S3",
-        "Amazon Lambda",
-        "API Gateway",
-        "Next.js"
+        "html",
+        "Css",
+        "javascript",
+
       ],
       links: [
         {
           type: "Website",
-          href: "https://bucketbyte.com",
+          href: "https://fusion2048.netlify.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/sahilshenoy/bucket-byte",
+          href: "https://github.com/URAYUSHJAIN/Fusion",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://imgur.com/a/bVixY0S",
-    },
-    {
-      title: "NeuroNote",
-      href: "https://neuro-note.com",
-      dates: "Sept 2024",
-      active: true,
-      description:
-        "A web application that enables users to upload documents and create notes, featuring integrated AI-powered search capabilities for efficient information retrieval. It leverages cutting-edge technologies to provide a seamless experience in managing and searching through personal and team documentation.",
-      technologies: [
-        "Open AI API",
-        "Convex",
-        "Vector Embedding",
-        "Clerk",
-        "Next.js"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://neuro-note.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/dhwanibudhiraja/neuronote",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://imgur.com/a/bVixY0S",
+      image: "/fusion.jpg",
     }
+    
   ],
+
+  patents: [
+  {
+    title: "Smart Energy Optimization System",
+    dateOfPublish: "March 2024",
+    patentNumber: "IN1234567",
+    applicationNumber: "20231234567",
+  },
+  {
+    title: "Blockchain-Based Citizen Services",
+    dateOfPublish: "July 2023",
+    patentNumber: "IN7654321",
+    applicationNumber: "20237654321",
+  },
+  // Add more patents as needed
+],
 
   UpcomingProjects: [
     {
@@ -190,29 +235,7 @@ export const DATA = {
       active: true,
       description:
         "Developing a comprehensive Learning Management System (LMS) using Next.js, Node.js, and MongoDB, focusing on a seamless user experience and efficient backend processes. Integrating technologies like Redis for caching and AWS S3 for media storage, leading to significant improvements in performance and user engagement.",
-      technologies: [
-        "Next.js",
-        "Node.js",
-        "Express.js",
-        "AWS S3",
-        "RTK Query",
-        "Socket.io",
-        "MongoDB",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://imgur.com/a/bVixY0S",
+      
     },
     {
       title: "RAG",
