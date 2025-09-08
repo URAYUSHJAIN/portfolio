@@ -1,0 +1,12 @@
+.neon-gradient-card {
+  --border-size: 2px;
+  --border-radius: 20px;
+  --neon-first-color: #ff00aa;
+  --neon-second-color: #00FFF1;
+  --card-width: 0px;
+  --card-height: 0px;
+  --card-content-radius: 18px;
+  --pseudo-element-width: 0px;
+  --pseudo-element-height: 0px;
+  --after-blur: 0px;
+}

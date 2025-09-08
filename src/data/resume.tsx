@@ -1,4 +1,4 @@
-import { Icons } from "../../icons";
+import { Icons } from "@/components/icons";
 import { HomeIcon, icons , NotebookIcon, File} from "lucide-react";
 
 export const DATA = {
@@ -121,6 +121,7 @@ export const DATA = {
         },
       ],
       image: "/GenShakti.jpg",
+      video: "",
     },
     {
       title: "shayoga",
@@ -153,6 +154,7 @@ export const DATA = {
         },
       ],
       image: "",
+      video: "",
     },
     {
       title: "Tacwin",
@@ -180,6 +182,7 @@ export const DATA = {
         },
       ],
       image: "/tacwin.jpg",
+      video: "",
     },
     {
       title: "Fusion2048",
@@ -207,25 +210,43 @@ export const DATA = {
         },
       ],
       image: "/fusion.jpg",
+      video: "",
     }
     
   ],
 
   patents: [
-  {
-    title: "Smart Energy Optimization System",
-    dateOfPublish: "March 2024",
-    patentNumber: "IN1234567",
-    applicationNumber: "20231234567",
-  },
-  {
-    title: "Blockchain-Based Citizen Services",
-    dateOfPublish: "July 2023",
-    patentNumber: "IN7654321",
-    applicationNumber: "20237654321",
-  },
-  // Add more patents as needed
-],
+    {
+      title: "Smart Energy Optimization System",
+      dateOfPublish: "March 2024",
+      patentNumber: "IN1234567",
+      applicationNumber: "20231234567",
+    },
+    {
+      title: "Blockchain-Based Citizen Services",
+      dateOfPublish: "July 2023",
+      patentNumber: "IN7654321",
+      applicationNumber: "20237654321",
+    },
+    {
+      title: "AI-Powered Carbon Footprint Analyzer",
+      dateOfPublish: "November 2023",
+      patentNumber: "IN2468135",
+      applicationNumber: "20232468135",
+    },
+    {
+      title: "Decentralized Crowdfunding Protocol",
+      dateOfPublish: "January 2024",
+      patentNumber: "IN3691470",
+      applicationNumber: "20233691470",
+    },
+    {
+      title: "Renewable Energy Grid Management System",
+      dateOfPublish: "May 2024",
+      patentNumber: "IN4815926",
+      applicationNumber: "20234815926",
+    },
+  ],
 
   UpcomingProjects: [
     {
@@ -235,7 +256,6 @@ export const DATA = {
       active: true,
       description:
         "Developing a comprehensive Learning Management System (LMS) using Next.js, Node.js, and MongoDB, focusing on a seamless user experience and efficient backend processes. Integrating technologies like Redis for caching and AWS S3 for media storage, leading to significant improvements in performance and user engagement.",
-      
     },
     {
       title: "RAG",
@@ -244,25 +264,28 @@ export const DATA = {
       active: true,
       description:
         "Developed a robust and free medical knowledge base using Retrieval Augmented Generation (RAG) with Pinecone, Next.js, LangChain, and Transformers.js. The project processes medical documents for seamless retrieval and embedding, offering efficient and cost-effective AI-powered solutions.",
-      technologies: [
-        "langchain",
-        "pinecone",
-        "next.js",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://imgur.com/a/bVixY0S",
+    },
+    {
+      title: "RAG",
+      href: "",
+      dates: "Sept 2023 - Present",
+      active: true,
+      description:
+        "Developed a robust and free medical knowledge base using Retrieval Augmented Generation (RAG) with Pinecone, Next.js, LangChain, and Transformers.js. The project processes medical documents for seamless retrieval and embedding, offering efficient and cost-effective AI-powered solutions.",
+    },{
+      title: "RAG",
+      href: "",
+      dates: "Sept 2023 - Present",
+      active: true,
+      description:
+        "Developed a robust and free medical knowledge base using Retrieval Augmented Generation (RAG) with Pinecone, Next.js, LangChain, and Transformers.js. The project processes medical documents for seamless retrieval and embedding, offering efficient and cost-effective AI-powered solutions.",
+    },{
+      title: "RAG",
+      href: "",
+      dates: "Sept 2023 - Present",
+      active: true,
+      description:
+        "Developed a robust and free medical knowledge base using Retrieval Augmented Generation (RAG) with Pinecone, Next.js, LangChain, and Transformers.js. The project processes medical documents for seamless retrieval and embedding, offering efficient and cost-effective AI-powered solutions.",
     }
   ],
 
