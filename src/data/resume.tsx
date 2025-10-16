@@ -1,10 +1,10 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, icons , NotebookIcon, File} from "lucide-react";
+import { HomeIcon, NotebookIcon, File} from "lucide-react";
 
 export const DATA = {
   name: "Ayush Jain",
   initials: "AJ",
-  url: "https://dhwanibudhiraja.com",
+  url: "https://urayushjain.vercel.app",
   location: "Ghaziabad, India",
   locationLink: "https://maps.app.goo.gl/gjC8e8hepcGbdsU38",
   description:
@@ -94,7 +94,7 @@ export const DATA = {
       href: "https://gdg.community.dev/gdg-abesec/",
       role: "Co Organizer",
       logoUrl: "/gdg.jpg",
-      start: "Sep 2025",
+      start: "Sep 2024",
       end: "Present",
       description: "Leading event management and community engagement initiatives. Responsible for organizing technical workshops, managing sponsorships, and fostering leadership development within the Google Developer Groups community.",
       responsibilities: [
@@ -268,6 +268,36 @@ export const DATA = {
 
   certificate: [
     {
+      title: "Hacktoberfest 2025: Supercontributor",
+      dates: "Oct 2025",
+      description:
+        "Achieved Supercontributor status in Hacktoberfest 2025, demonstrating exceptional contribution to open-source projects. Recognized for outstanding participation in the global open-source community and advancing collaborative development practices.",
+      image: "/hacktoberfest_logo.jpg",
+      links: [
+        {
+          title: "Show Credential",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.holopin.io/hacktoberfest2025/userbadge/cmgkj3kdf002ol5045f2p5zz7",
+        },
+      ],
+      credentialId: "cmgkj3kdf002o15045t2p5zz7",
+      skills: ["Open-Source Development", "Open Sources"]
+    },
+    {
+      title: "AWS Academy Graduate - Cloud Foundations",
+      dates: "Sep 2025",
+      description:
+        "Completed AWS Academy Cloud Foundations program, gaining comprehensive knowledge of Amazon Web Services cloud computing fundamentals, including core AWS services, security, architecture, and pricing models.",
+      image: "/aws_china_logo.jpg",
+      links: [
+        {
+          title: "Show Credential",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.credly.com/badges/33da683e-9f96-417b-8db8-ddd5fc2ed644/print",
+        },
+      ],
+    },
+    {
       title: "Certification: Blockchain Basics",
       dates: "May 2025",
       description:
@@ -320,20 +350,6 @@ export const DATA = {
           title: "Show Credential",
           icon: <Icons.globe className="h-4 w-4" />,
           href: "https://www.coursera.org/account/accomplishments/verify/VQZ6YM6KZAFK?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
-        },
-      ],
-    },
-    {
-      title: "Pre-MBA Statistics",
-      dates: "Aug 2023",
-      description:
-        "Completed Pre-MBA Statistics course from Indian Institute of Management Ahmedabad. Gained strong foundation in statistical analysis and data interpretation for business applications.",
-      image: "/iim.png",
-      links: [
-        {
-          title: "Show Credential",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://www.coursera.org/account/accomplishments/verify/QB2GCAUDUPHK",
         },
       ],
     },
