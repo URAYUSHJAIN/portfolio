@@ -125,12 +125,12 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section id="skills" aria-labelledby="skills-heading">
+      <section id="skills" aria-labelledby="skills-heading" role="region">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 id="skills-heading" className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <ul className="flex flex-wrap gap-1" role="list">
+          <ul className="flex flex-wrap gap-1" role="list" aria-label="Technical skills">
             {DATA.skills.map((skill, id) => (
               <li key={skill}>
                 <BlurFade delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
@@ -141,7 +141,7 @@ export default function Page() {
           </ul>
         </div>
       </section>
-      <section id="projects" aria-labelledby="projects-heading">
+      <section id="projects" aria-labelledby="projects-heading" role="region">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -166,7 +166,6 @@ export default function Page() {
               >
                 <ProjectCard
                   href={project.href}
-                  key={project.title}
                   title={project.title}
                   description={project.description}
                   dates={project.dates}
@@ -175,7 +174,7 @@ export default function Page() {
                   video={project.video}
                   links={project.links}
                 />
-              </BlurFade>
+                </BlurFade>
             ))}
           </div>
         </div>
