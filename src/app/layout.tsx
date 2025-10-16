@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import { SchemaMarkup } from "@/components/schema-markup";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.png",
     apple: "/favicon.jpg",
   },
-  description: "Portfolio of Ayush Jain, a third-year Computer Science student and 5x patent holder specializing in Generative AI, Web3, and Full-Stack Development with experience in React, Node.js, and blockchain technologies.",
+  description: "Ayush Jain - Full-Stack Developer & 5x Patent Holder specializing in Generative AI, Web3, and blockchain technologies. Computer Science student at ABES.",
   keywords: [
     "Ayush Jain",
     "Full-Stack Developer", 
@@ -41,11 +42,14 @@ export const metadata: Metadata = {
     "Solidity",
     "ABES Engineering College"
   ],
+  alternates: {
+    canonical: DATA.url,
+  },
   authors: [{ name: "Ayush Jain" }],
   creator: "Ayush Jain",
   openGraph: {
     title: `${DATA.name} | Full-Stack Developer & Web3 Enthusiast`,
-    description: "Portfolio of Ayush Jain, a third-year Computer Science student and 5x patent holder specializing in Generative AI, Web3, and Full-Stack Development with experience in React, Node.js, and blockchain technologies.",
+    description: "Ayush Jain - Full-Stack Developer & 5x Patent Holder specializing in Generative AI, Web3, and blockchain technologies. Computer Science student at ABES.",
     url: DATA.url,
     siteName: `${DATA.name} Portfolio`,
     locale: "en_US",
@@ -62,7 +66,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${DATA.name} | Full-Stack Developer & Web3 Enthusiast`,
-    description: "Portfolio of Ayush Jain, a third-year Computer Science student and 5x patent holder specializing in Generative AI, Web3, and Full-Stack Development.",
+    description: "Ayush Jain - Full-Stack Developer & 5x Patent Holder specializing in Generative AI, Web3, and blockchain technologies.",
     images: ["/ayu.jpg"],
     creator: "@urayushjain",
     site: "@urayushjain",
@@ -82,6 +86,9 @@ export const metadata: Metadata = {
     google: "", // Add your Google Search Console verification code here
     yandex: "",
   },
+  other: {
+    "google-site-verification": "", // Add verification meta tag here when ready
+  },
 };
 
 export default function RootLayout({
@@ -91,6 +98,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <SchemaMarkup />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
