@@ -45,9 +45,10 @@ const BlurFade = ({
         exit="hidden"
         variants={combinedVariants}
         transition={{
-          delay: 0.04 + delay,
+          delay: 0.02 + delay, // Reduced base delay for better performance
           duration,
           ease: "easeOut",
+          type: "tween", // Use tween for better performance over spring
         }}
         className={className}
       >

@@ -21,7 +21,7 @@ const BlurFadeText = ({
   text,
   className,
   variant,
-  characterDelay = 0.03,
+  characterDelay = 0.02, // Reduced for better performance
   delay = 0,
   yOffset = 8,
   animateByCharacter = false,
@@ -48,6 +48,8 @@ const BlurFadeText = ({
                 yoyo: Infinity,
                 delay: delay + i * characterDelay,
                 ease: "easeOut",
+                type: "tween", // Better performance
+                duration: 0.3, // Faster animation
               }}
               className={cn("inline-block", className)}
               style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
@@ -72,6 +74,8 @@ const BlurFadeText = ({
             yoyo: Infinity,
             delay,
             ease: "easeOut",
+            type: "tween", // Better performance
+            duration: 0.3, // Faster animation
           }}
           className={cn("inline-block", className)}
         >

@@ -10,9 +10,18 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
+import dynamic from "next/dynamic";
 
-const BLUR_FADE_DELAY = 0.04;
+// Lazy load heavy components for better performance
+const NeonGradientCard = dynamic(
+  () => import("@/components/magicui/neon-gradient-card").then(mod => ({ default: mod.NeonGradientCard })),
+  { 
+    ssr: false,
+    loading: () => <div className="h-48 animate-pulse bg-gray-200 rounded-lg" />
+  }
+);
+
+const BLUR_FADE_DELAY = 0.02; // Reduced for better performance
 
 export default function Page() {
   return (

@@ -6,12 +6,12 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: 'swap', // Optimize font loading performance
 });
 
 export const metadata: Metadata = {
@@ -101,22 +101,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <SchemaMarkup />
-        {/* Google Analytics - Replace GA_MEASUREMENT_ID with your actual Google Analytics Measurement ID */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID', {
-              page_title: document.title,
-              page_location: window.location.href,
-            });
-          `}
-        </Script>
+        {/* Preload critical assets for better performance */}
+        <link rel="preload" href="/ayu.jpg" as="image" />
+        <link rel="preload" href="/favicon.ico" as="icon" />
+        {/* Google Analytics - Temporarily removed for performance optimization 
+            Will be re-enabled when actual GA_MEASUREMENT_ID is provided */}
       </head>
       <body
         className={cn(
@@ -125,7 +114,7 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
-          <TooltipProvider delayDuration={0}>
+          <TooltipProvider delayDuration={300}>
             {children}
             <Navbar />
           </TooltipProvider>
