@@ -4,15 +4,10 @@ const nextConfig = {
   images: {
     // Optimize images for better performance
     formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 31536000, // 1 year
+    minimumCacheTTL: 31536000, // 1 year cache
   },
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
-  experimental: {
-    optimizeCss: true,
-    gzipSize: true,
-  },
+  compress: true, // Enable gzip compression
+  poweredByHeader: false, // Remove X-Powered-By header
 };
 
 export default nextConfig;

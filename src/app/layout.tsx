@@ -11,7 +11,8 @@ import "./globals.css";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-  display: 'swap', // Optimize font loading performance
+  display: 'swap', // Improve font loading performance
+  preload: true, // Preload the font
 });
 
 export const metadata: Metadata = {
@@ -101,11 +102,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <SchemaMarkup />
-        {/* Preload critical assets for better performance */}
-        <link rel="preload" href="/ayu.jpg" as="image" />
+        {/* Preload critical resources for better performance */}
+        <link rel="preload" href="/ayu.jpg" as="image" type="image/jpeg" />
         <link rel="preload" href="/favicon.ico" as="icon" />
-        {/* Google Analytics - Temporarily removed for performance optimization 
-            Will be re-enabled when actual GA_MEASUREMENT_ID is provided */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {/* Google Analytics - Disabled until valid tracking ID is provided */}
       </head>
       <body
         className={cn(
@@ -114,7 +116,7 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
-          <TooltipProvider delayDuration={300}>
+          <TooltipProvider delayDuration={300}> {/* Reduced immediate processing */}
             {children}
             <Navbar />
           </TooltipProvider>

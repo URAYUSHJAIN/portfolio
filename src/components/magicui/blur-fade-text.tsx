@@ -21,13 +21,13 @@ const BlurFadeText = ({
   text,
   className,
   variant,
-  characterDelay = 0.02, // Reduced for better performance
+  characterDelay = 0.015, // Reduced for better performance
   delay = 0,
-  yOffset = 8,
+  yOffset = 4, // Reduced animation distance
   animateByCharacter = false,
 }: BlurFadeTextProps) => {
   const defaultVariants: Variants = {
-    hidden: { y: yOffset, opacity: 0, filter: "blur(8px)" },
+    hidden: { y: yOffset, opacity: 0, filter: "blur(4px)" }, // Reduced blur
     visible: { y: -yOffset, opacity: 1, filter: "blur(0px)" },
   };
   const combinedVariants = variant || defaultVariants;
@@ -48,8 +48,6 @@ const BlurFadeText = ({
                 yoyo: Infinity,
                 delay: delay + i * characterDelay,
                 ease: "easeOut",
-                type: "tween", // Better performance
-                duration: 0.3, // Faster animation
               }}
               className={cn("inline-block", className)}
               style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
@@ -74,8 +72,6 @@ const BlurFadeText = ({
             yoyo: Infinity,
             delay,
             ease: "easeOut",
-            type: "tween", // Better performance
-            duration: 0.3, // Faster animation
           }}
           className={cn("inline-block", className)}
         >

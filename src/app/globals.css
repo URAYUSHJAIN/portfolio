@@ -65,6 +65,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-display: swap; /* Improve font loading */
+    text-rendering: optimizeSpeed; /* Prioritize speed over quality */
   }
 }
 
@@ -75,19 +77,12 @@
     will-change: transform;
   }
   
-  .optimize-text {
-    text-rendering: optimizeSpeed;
-    font-display: swap;
-  }
-  
-  .reduce-motion {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  .optimize-rendering {
+    contain: layout style paint;
   }
 }
 
-/* Reduce motion for users who prefer it */
+/* Reduce animations for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
