@@ -68,6 +68,18 @@ export const DATA = {
         icon: Icons.email,
         navbar: true,
       },
+      Facebook: {
+        name: "Facebook",
+        url: "https://facebook.com/urayushjain", // Update with your actual Facebook profile
+        icon: Icons.globe, // Using globe icon as placeholder
+        navbar: false,
+      },
+      Instagram: {
+        name: "Instagram", 
+        url: "https://instagram.com/urayushjain", // Update with your actual Instagram profile
+        icon: Icons.globe, // Using globe icon as placeholder
+        navbar: false,
+      },
     },
   },
   education: [
@@ -143,7 +155,7 @@ export const DATA = {
     {
       title: "shayoga",
       href: "https://shayoga.netlify.app/",
-      dates: "February 2025 - March 2025",
+      dates: "August 2024 - October 2024",
       active: true,
       description:
       "Shayoga is a Web3-powered crowdfunding platform that allows anyone to create or support fundraising campaigns on the Ethereum blockchain. Designed with transparency and decentralization at its core, Shayoga ensures that donations reach the right hands — without intermediaries.",
@@ -176,7 +188,7 @@ export const DATA = {
     {
       title: "Tacwin",
       href: "https://tacwin.vercel.app/",
-      dates: "February 2025 - March 2025",
+      dates: "July 2024 - September 2024",
       active: true,
       description:
       "A beautifully designed Tic Tac Toe game with a modern glassy, neon-themed interface. Built using React, this project is a fun way to revisit a classic game while showcasing responsive design and CSS effects.",

@@ -49,6 +49,7 @@ export function ProjectCard({
       <Link
         href={href || "#"}
         className={cn("block cursor-pointer", className)}
+        aria-label={`View ${title} project details`}
       >
         {video && (
           <video
@@ -57,13 +58,14 @@ export function ProjectCard({
             loop
             muted
             playsInline
+            aria-label={`${title} project demonstration video`}
             className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
           />
         )}
         {image && (
           <Image
             src={image}
-            alt={title}
+            alt={`${title} project screenshot`}
             width={500}
             height={300}
             className="h-40 w-full overflow-hidden object-cover object-top"
@@ -101,9 +103,15 @@ export function ProjectCard({
         {links && links.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
-              <Link href={link?.href} key={idx} target="_blank">
+              <Link 
+                href={link?.href} 
+                key={idx} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label={`${link.type} for ${title} project`}
+              >
                 <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                  {link.icon}
+                  <span aria-hidden="true">{link.icon}</span>
                   {link.type}
                 </Badge>
               </Link>

@@ -24,12 +24,14 @@ export default function Navbar() {
                   href={item.href}
                   target={item.href.startsWith('http') ? "_blank" : undefined}
                   rel={item.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                  aria-label={`Navigate to ${item.label}`}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-12"
                   )}
                 >
-                  <item.icon className="size-4" />
+                  <item.icon className="size-4" aria-hidden="true" />
+                  <span className="sr-only">{item.label}</span>
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
@@ -49,12 +51,14 @@ export default function Navbar() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Visit ${social.name} profile`}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
                       "size-12"
                     )}
                   >
-                    <social.icon className="size-4" />
+                    <social.icon className="size-4" aria-hidden="true" />
+                    <span className="sr-only">{social.name}</span>
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>
