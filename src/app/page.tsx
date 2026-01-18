@@ -215,6 +215,43 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <section id="articles">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 15}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Medium Articles
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Writing and Insights
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  I write about my experiences in patent filing, hackathons, and open source to help other students navigate the tech world.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+            {DATA.articles.map((article, id) => (
+              <BlurFade
+                key={article.title}
+                delay={BLUR_FADE_DELAY * 16 + id * 0.05}
+              >
+                <ProjectCard
+                  href={article.href}
+                  title={article.title}
+                  description={article.description}
+                  dates={article.dates}
+                  tags={[]}
+                  image={article.image}
+                  links={article.links}
+                />
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="certificate">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>

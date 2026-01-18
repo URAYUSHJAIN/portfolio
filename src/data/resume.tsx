@@ -13,33 +13,56 @@ export const DATA = {
     "I am Ayush Jain, a third-year Computer Science Engineering student at ABES Engineering College and a 5x patent holder. With a strong foundation in core CSE subjects and advanced skills in data structures, algorithms, and system design, I thrive on building scalable, impactful solutions.\nMy academic and project journey has fueled a deep passion for technology, leading to the development of cutting-edge projects in smart energy systems, blockchain-based optimization, and citizen services. I am committed to continuous learning and pushing the boundaries of technology through research, innovation, and hands-on engineering.",
   avatarUrl: "/ayu.jpg",
   skills: [
-  "Data Structures & Algorithms",
-  "Object-Oriented Programming (OOP)",
-  "C",
-  "Java",
-  "JavaScript",
-  "React",
-  "Tailwind CSS",
-  "Vite",
-  "Node.js",
-  "SQL",
-  "Git",
-  "GitHub",
-  "Firebase Auth",
-  "Postman",
-  "Hugging Face",
-  "Mistral",
-  "Gemini Pro",
-  "Vertex AI",
-  "Prompt Engineering",
-  "Vercel",
-  "Netlify"
-],
+    // Fundamentals
+    "Data Structures & Algorithms",
+    "Object-Oriented Programming (OOP)",
+    "System Design",
+    // Languages
+    "C",
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "CSS",
+    "Solidity",
+    // Frontend
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "Vite",
+    "React Flow",
+    "React Leaflet",
+    "Chart.js",
+    // Backend
+    "Node.js",
+    "Express",
+    "Firebase",
+    // Databases
+    "SQL",
+    // AI/ML
+    "Hugging Face",
+    "Mistral",
+    "Gemini Pro",
+    "Vertex AI",
+    "Prompt Engineering",
+    // Blockchain
+    "Ethers.js",
+    "Hardhat",
+    "Alchemy",
+    "Metamask",
+    // Tools
+    "Git",
+    "GitHub",
+    "Postman",
+    // Deployment
+    "Vercel",
+    "Netlify",
+  ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     // { href: "https://www.techwithsd.com", icon: NotebookIcon, label: "Blog" },
     { 
-      href: "https://drive.google.com/file/d/1blI7Nqdd05OyUxBKjWBchmucsfwygeDp/view?usp=sharing", 
+      href: "https://drive.google.com/file/d/1uIGeJfrX3DgFwwKAxigGAB3sg-4XhLoN/view?usp=sharing", 
       icon: File, 
       label: "Resume",
       target: "_blank",
@@ -186,31 +209,92 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Tacwin",
-      href: "https://tacwin.vercel.app/",
-      dates: "July 2024 - September 2024",
+      title: "AadhaarPulse",
+      href: "https://aadhaar-pulse.vercel.app/",
+      dates: "January 2026",
       active: true,
       description:
-      "A beautifully designed Tic Tac Toe game with a modern glassy, neon-themed interface. Built using React, this project is a fun way to revisit a classic game while showcasing responsive design and CSS effects.",
+        "AadhaarPulse - AI-powered analytics platform for monitoring Aadhaar authentication patterns. Built for UIDAI Hackathon 2026.",
       technologies: [
         "React",
-        "JavaScript",
-        "CSS",
-        "vercel",
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Vercel",
       ],
       links: [
         {
           type: "Website",
-          href: "https://tacwin.vercel.app/",
+          href: "https://aadhaar-pulse.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/URAYUSHJAIN/Tacwin",
+          href: "https://github.com/URAYUSHJAIN/AadhaarPulse-",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/tacwin.jpg",
+      image: "/AadhaarPulse.png",
+      video: "",
+    },
+    {
+      title: "ArogyaPlus",
+      href: "https://arogyaplus-two.vercel.app/",
+      dates: "January 2026",
+      active: true,
+      description:
+        "AI-powered healthcare platform combining OCR, computer vision for intelligent medical report analysis. Integrates modern medicine with Ayurvedic solutions.",
+      technologies: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Gemini Pro",
+        "OCR",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://arogyaplus-two.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/URAYUSHJAIN/Arogyaplus",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/Arogyaplus.png",
+      video: "",
+    },
+    {
+      title: "DevStudy",
+      href: "https://devstudy-ten.vercel.app/",
+      dates: "January 2026",
+      active: true,
+      description:
+        "A comprehensive, interactive learning platform designed to help developers master engineering skills, system design, and coding through hands-on practice.",
+      technologies: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://devstudy-ten.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/URAYUSHJAIN/Devstudy",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/DevStudy.png",
       video: "",
     },
     {
@@ -275,6 +359,51 @@ export const DATA = {
       applicationNumber: "202511053921",
       publicationNumber: "25/2025",
       date: "20/06/2025",
+    },
+  ],
+
+  articles: [
+    {
+      title: "How Anyone Can Protect Their Big Idea: A Student Guide to Filing Patents",
+      href: "https://medium.com/@urayushjain/how-anyone-can-protect-their-big-idea-a-student-guide-to-filing-patents-d9f6e6448571",
+      dates: "Aug 6, 2025",
+      description: "A comprehensive guide on how students can file patents, based on my journey of publishing five patents in twelve months. It breaks down myths and provides a step-by-step roadmap for student inventors.",
+      image: "/How Anyone Can Protect Their Big Idea A Student Guide to Filing Patents.webp",
+      links: [
+        {
+          type: "Medium",
+          href: "https://medium.com/@urayushjain/how-anyone-can-protect-their-big-idea-a-student-guide-to-filing-patents-d9f6e6448571",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Your Idea Won’t Speak for Itself; Your Presentation Will. Build It Right.",
+      href: "https://medium.com/@urayushjain/your-idea-wont-speak-for-itself-your-presentation-will-build-it-right-9a4d79c6b1b6",
+      dates: "Nov 23, 2025",
+      description: "Sharing the '8-Slide Hackathon Winner Blueprint' and how to transform technical complexity into clear, impactful visual stories that win rooms and convince judges.",
+      image: "/Your Idea Won’t Speak.webp",
+      links: [
+        {
+          type: "Medium",
+          href: "https://medium.com/@urayushjain/your-idea-wont-speak-for-itself-your-presentation-will-build-it-right-9a4d79c6b1b6",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "From Zero to Contributor: A Student’s Guide to Conquering Hacktoberfest",
+      href: "https://medium.com/@urayushjain/from-zero-to-contributor-a-students-guide-to-conquering-hacktoberfest-c566a5d8fbe4",
+      dates: "Oct 17, 2025",
+      description: "A guide for students on starting their open-source journey, covering everything from Git basics to handling feedback and why the real prize isn't just the swag.",
+      image: "/From Zero to Contributor.webp",
+      links: [
+        {
+          type: "Medium",
+          href: "https://medium.com/@urayushjain/from-zero-to-contributor-a-students-guide-to-conquering-hacktoberfest-c566a5d8fbe4",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
     },
   ],
 
