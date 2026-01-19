@@ -30,7 +30,8 @@ export default function Page() {
             <div className="flex-col flex flex-1 space-y-1.5">
               {/* Load main heading immediately for better FCP */}
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Ayush Jain - Full-Stack Developer & Web3 Enthusiast
+                Ayush Jain <br/> 
+                <span className="text-xl font-semibold sm:text-3xl xl:text-3xl/none">          Full-Stack Developer </span>
               </h1>
               <BlurFadeText
                 delay={0} // No delay for critical content
