@@ -136,7 +136,7 @@ export default function Page() {
                     Check out my latest work
                   </h2>
                   <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  These projects are a glimpse into what I've been working on. I'm always refining my approach and slowly building new things, with much more to come.
+                  These projects are a glimpse into what I&apos;ve been working on. I&apos;m always refining my approach and slowly building new things, with much more to come.
                   </p>
                 </div>
               </div>
@@ -184,7 +184,7 @@ export default function Page() {
                     Check out my upcoming projects
                   </h2>
                   <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  These projects are what I'm working on right now and soon will be available in the future
+                  These projects are what I&apos;m working on right now and soon will be available in the future
                   </p>
                 </div>
               </div>

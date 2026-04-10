@@ -158,7 +158,7 @@ export default function Page() {
                   Check out my latest work
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                These projects are a glimpse into what I've been working on. I'm always refining my approach and slowly building new things, with much more to come.
+                These projects are a glimpse into what I&apos;ve been working on. I&apos;m always refining my approach and slowly building new things, with much more to come.
                 </p>
               </div>
             </div>
@@ -196,7 +196,7 @@ export default function Page() {
                   My Patent Portfolio
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                As a 5x patent holder, I've contributed to innovation in smart energy systems, blockchain technology, and AI-powered solutions.
+                As a 5x patent holder, I&apos;ve contributed to innovation in smart energy systems, blockchain technology, and AI-powered solutions.
                 </p>
               </div>
             </div>
