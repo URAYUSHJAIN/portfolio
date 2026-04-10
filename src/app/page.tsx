@@ -115,10 +115,14 @@ export default function Page() {
                 key={experience.company}
                 logoUrl={experience.logoUrl}
                 altText={experience.company}
-                title={experience.company}
-                subtitle={experience.role}
+                title={experience.role}
+                subtitle={[experience.company, experience.employmentType]
+                  .filter(Boolean)
+                  .join(" · ")}
                 href={experience.href}
+                badges={experience.employmentType ? [experience.employmentType] : undefined}
                 period={`${experience.start} - ${experience.end}`}
+                location={experience.location}
                 description={experience.description}
                 responsibilities={experience.responsibilities}
               />

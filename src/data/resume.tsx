@@ -125,12 +125,50 @@ export const DATA = {
   ],
   experience: [
     {
+      company: "Joyfullminds",
+      href: "https://www.linkedin.com/company/joyfullminds/",
+      role: "Software Development",
+      employmentType: "Internship",
+      logoUrl: "/Joyfullminds.jpg",
+      start: "Apr 2026",
+      end: "Present",
+      location: "Hybrid",
+      description:
+        "Contributing to software development initiatives across feature implementation, debugging, and collaborative delivery in a fast-paced team environment.",
+      responsibilities: [
+        "Develop and maintain product features",
+        "Debug and resolve implementation issues",
+        "Collaborate with cross-functional teams",
+        "Support iterative product improvements",
+      ],
+    },
+    {
+      company: "Singari Global",
+      href: "https://www.linkedin.com/company/singari-global/",
+      role: "Software Engineer",
+      employmentType: "Internship",
+      logoUrl: "/singari.svg",
+      start: "Feb 2026",
+      end: "Mar 2026",
+      location: "Remote",
+      description:
+        "Built and debugged frontend features using React.js and Tailwind CSS. Fixed production bugs, improved UI performance, and shipped reusable components with a cross-functional team.",
+      responsibilities: [
+        "Build reusable React components",
+        "Fix production bugs and UI issues",
+        "Improve frontend performance",
+        "Collaborate with design and engineering",
+      ],
+    },
+    {
       company: "GDG ABESEC",
       href: "https://gdg.community.dev/gdg-abesec/",
       role: "Co Organizer",
+      employmentType: "Community Leadership",
       logoUrl: "/gdg.jpg",
       start: "Sep 2024",
       end: "Present",
+      location: "On-site",
       description: "Leading event management and community engagement initiatives. Responsible for organizing technical workshops, managing sponsorships, and fostering leadership development within the Google Developer Groups community.",
       responsibilities: [
         "Team Leadership & Leadership Development",
@@ -265,7 +303,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/Arogyaplus.png",
+      image: "/Arogyaplus.jpeg",
       video: "",
     },
     {
