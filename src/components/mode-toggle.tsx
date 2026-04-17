@@ -1,28 +1,43 @@
 "use client";
 
+import * as React from "react";
 import { Button } from "./ui/button";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
-export function ModeToggle() {
+export const ModeToggle = React.forwardRef<
+  HTMLButtonElement,
+  React.ComponentPropsWithoutRef<typeof Button>
+>(({ className, onClick, ...props }, ref) => {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = React.useState(false);
 
   // Prevent hydration mismatch
-  useEffect(() => {
+  React.useEffect(() => {
     setMounted(true);
   }, []);
+
+  const handleClick: React.MouseEventHandler<HTMLButtonElement> = (event) => {
+    onClick?.(event);
+
+    if (!event.defaultPrevented) {
+      setTheme(theme === "dark" ? "light" : "dark");
+    }
+  };
 
   if (!mounted) {
     // Return a consistent button during SSR
     return (
       <Button
+        ref={ref}
         variant="ghost"
         type="button"
         size="icon"
-        className="px-2"
-        aria-label="Toggle theme"
+        className={cn("px-2", className)}
+        {...props}
+        onClick={onClick}
+        aria-label={props["aria-label"] ?? "Toggle theme"}
       >
         <SunIcon 
           className="h-[1.2rem] w-[1.2rem] text-neutral-800" 
@@ -35,12 +50,14 @@ export function ModeToggle() {
 
   return (
     <Button
+      ref={ref}
       variant="ghost"
       type="button"
       size="icon"
-      className="px-2"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+      className={cn("px-2", className)}
+      {...props}
+      onClick={handleClick}
+      aria-label={props["aria-label"] ?? `Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
       <SunIcon 
         className="h-[1.2rem] w-[1.2rem] text-neutral-800 dark:hidden dark:text-neutral-200" 
@@ -55,4 +72,6 @@ export function ModeToggle() {
       </span>
     </Button>
   );
-} 
+});
+
+ModeToggle.displayName = "ModeToggle";
