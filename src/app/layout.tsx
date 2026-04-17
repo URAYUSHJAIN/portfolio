@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import { Oneko } from "@/components/oneko";
 import { SchemaMarkup } from "@/components/schema-markup";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -104,7 +105,6 @@ export default function RootLayout({
         <SchemaMarkup />
         {/* Preload critical resources for better performance */}
         <link rel="preload" href="/ayu.jpg" as="image" type="image/jpeg" />
-        <link rel="preload" href="/favicon.ico" as="icon" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         {/* Google Analytics - Disabled until valid tracking ID is provided */}
@@ -118,6 +118,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={300}> {/* Reduced immediate processing */}
             {children}
+            <Oneko />
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>

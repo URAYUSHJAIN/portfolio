@@ -1,8 +1,14 @@
 "use client";
 
-import React, { PropsWithChildren, useRef } from "react";
+import React, { useRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+  type MotionValue,
+} from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
@@ -28,19 +34,29 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
       children,
       magnification = DEFAULT_MAGNIFICATION,
       distance = DEFAULT_DISTANCE,
-      direction = "center",
+      direction = "middle",
       ...props
     },
     ref,
   ) => {
     const mouseX = useMotionValue(Infinity);
 
+    const isDockIconElement = (
+      child: React.ReactNode,
+    ): child is React.ReactElement<DockIconProps> => {
+      return React.isValidElement(child) && child.type === DockIcon;
+    };
+
     const renderChildren = () => {
-      return React.Children.map(children, (child: any) => {
+      return React.Children.map(children, (child) => {
+        if (!isDockIconElement(child)) {
+          return child;
+        }
+
         return React.cloneElement(child, {
-          mouseX: mouseX,
-          magnification: magnification,
-          distance: distance,
+          mouseX,
+          magnification,
+          distance,
         });
       });
     };
@@ -69,10 +85,9 @@ export interface DockIconProps {
   size?: number;
   magnification?: number;
   distance?: number;
-  mouseX?: any;
+  mouseX?: MotionValue<number>;
   className?: string;
   children?: React.ReactNode;
-  props?: PropsWithChildren;
 }
 
 const DockIcon = ({
@@ -85,8 +100,10 @@ const DockIcon = ({
   ...props
 }: DockIconProps) => {
   const ref = useRef<HTMLDivElement>(null);
+  const fallbackMouseX = useMotionValue(Infinity);
+  const pointerX = mouseX ?? fallbackMouseX;
 
-  const distanceCalc = useTransform(mouseX, (val: number) => {
+  const distanceCalc = useTransform(pointerX, (val: number) => {
     const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
 
     return val - bounds.x - bounds.width / 2;
