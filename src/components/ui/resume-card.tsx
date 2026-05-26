@@ -43,6 +43,8 @@ export const ResumeCard = ({
       href={href || "#"}
       className="block cursor-pointer"
       onClick={handleClick}
+      aria-label={description ? `${title} — ${isExpanded ? "collapse" : "expand"} details` : title}
+      aria-expanded={description ? isExpanded : undefined}
     >
       <Card className="flex">
         <div className="flex-none">

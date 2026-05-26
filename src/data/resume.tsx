@@ -11,7 +11,7 @@ export const DATA = {
     "Third-year Computer Science Engineering student at ABES Engineering College, 5x Patent Holder specializing in Generative AI, Web3, and Full-Stack Development.",
   summary:
     "I am Ayush Jain, a third-year Computer Science Engineering student at ABES Engineering College and a 5x patent holder. With a strong foundation in core CSE subjects and advanced skills in data structures, algorithms, and system design, I thrive on building scalable, impactful solutions.\nMy academic and project journey has fueled a deep passion for technology, leading to the development of cutting-edge projects in smart energy systems, blockchain-based optimization, and citizen services. I am committed to continuous learning and pushing the boundaries of technology through research, innovation, and hands-on engineering.",
-  avatarUrl: "/ayu.jpg",
+  avatarUrl: "/ayu.webp",
   skills: [
     // Fundamentals
     "Data Structures & Algorithms",
@@ -397,6 +397,18 @@ export const DATA = {
       applicationNumber: "202511053921",
       publicationNumber: "25/2025",
       date: "20/06/2025",
+    },
+    {
+      title: "AI-POWERED DIGILOCKER BASED DOCUMENTLESS ADMISSION & VERIFICATION SYSTEM",
+      applicationNumber: "202611022743",
+      publicationNumber: "18/2026",
+      date: "01/05/2026",
+    },
+    {
+      title: "PROOF BASED AUTOMATED ATTENDANCE VERIFICATION SYSTEM",
+      applicationNumber: "202611022753",
+      publicationNumber: "18/2026",
+      date: "01/05/2026",
     },
   ],
 

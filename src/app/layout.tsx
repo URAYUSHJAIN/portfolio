@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/ayu.jpg",
+        url: "/ayu.webp",
         width: 1200,
         height: 630,
         alt: "Ayush Jain - Full-Stack Developer & Web3 Enthusiast",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${DATA.name} | Full-Stack Developer & Web3 Enthusiast`,
     description: "Ayush Jain - Full-Stack Developer & 5x Patent Holder specializing in Generative AI, Web3, and blockchain technologies.",
-    images: ["/ayu.jpg"],
+    images: ["/ayu.webp"],
     creator: "@urayushjain",
     site: "@urayushjain",
   },
@@ -104,9 +104,9 @@ export default function RootLayout({
       <head>
         <SchemaMarkup />
         {/* Preload critical resources for better performance */}
-        <link rel="preload" href="/ayu.jpg" as="image" type="image/jpeg" />
+        <link rel="preload" href="/ayu.webp" as="image" type="image/webp" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Google Analytics - Disabled until valid tracking ID is provided */}
       </head>
       <body

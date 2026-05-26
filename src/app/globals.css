@@ -82,28 +82,26 @@
   }
 }
 
-/* Enhanced accessibility - Focus styles */
+/* Enhanced accessibility - Focus styles (keyboard-only via :focus-visible) */
 @layer base {
-  /* Ensure focus is always visible */
-  *:focus {
+  /* Show focus ring only during keyboard navigation, not on mouse click */
+  *:focus-visible {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
   }
-  
-  /* Better focus for interactive elements */
-  button:focus,
-  a:focus,
-  input:focus,
-  textarea:focus,
-  select:focus {
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
     box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--ring));
   }
-  
-  /* Focus for custom components */
-  [role="button"]:focus,
-  [tabindex]:focus {
+
+  [role="button"]:focus-visible,
+  [tabindex]:focus-visible {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
   }
