@@ -46,9 +46,15 @@ export function CertificateCard({
         {links && links.length > 0 && (
           <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
             {links?.map((link, idx) => (
-              <Link href={link.href} key={idx}>
-                <Badge key={idx} title={link.title} className="flex gap-2 ml-2">
-                  {link.icon}
+              <Link
+                href={link.href}
+                key={idx}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${link.title} (opens in new tab)`}
+              >
+                <Badge className="flex gap-2 ml-2">
+                  <span aria-hidden="true">{link.icon}</span>
                   {link.title}
                 </Badge>
               </Link>

@@ -49,7 +49,7 @@ export function ExperienceCard({
                   className="inline-flex items-center gap-1 hover:text-primary transition-colors"
                 >
                   {title}
-                  <ChevronRightIcon className="size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100" />
+                  <ChevronRightIcon aria-hidden="true" className="size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100" />
                 </Link>
               ) : (
                 title

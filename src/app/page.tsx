@@ -24,12 +24,12 @@ export default function Page() {
         Skip to main content
       </a>
       <main id="main-content" className="flex flex-col min-h-[100dvh] space-y-10">
-      <section id="hero">
+      <section id="hero" aria-labelledby="hero-heading">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               {/* Load main heading immediately for better FCP */}
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+              <h1 id="hero-heading" className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                 Ayush Jain <br/> 
                 <span className="text-xl font-semibold sm:text-3xl xl:text-3xl/none">          Full-Stack Developer </span>
               </h1>

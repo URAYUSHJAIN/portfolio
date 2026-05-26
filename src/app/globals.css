@@ -88,6 +88,12 @@
   *:focus-visible {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Suppress outline for mouse/pointer users — keeps WCAG compliant without visual noise */
+  *:focus:not(:focus-visible) {
+    outline: none;
   }
 
   button:focus-visible,
@@ -97,6 +103,7 @@
   select:focus-visible {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
+    border-radius: 4px;
     box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--ring));
   }
 
@@ -104,6 +111,7 @@
   [tabindex]:focus-visible {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
+    border-radius: 4px;
   }
 }
 
